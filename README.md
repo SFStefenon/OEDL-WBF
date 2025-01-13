@@ -1,6 +1,6 @@
-# Weighted Boxes Fusion Hypertuned Explainable YOLOv8
+# Optimized ensemble of deep learning models based on weighted boxes fusion (OEDL-WBF)
 
-This repository presents a combination of methods for obtaining an explainable optimized you only look once (YOLO) model.
+The proposed OEDL-WBF presented in this repository employs the Optuna framework based on a tree-structured Parzen estimator for hyperparameter optimization, to find the best setup for the object detection model. Subsequently, the hypertuned model is trained using the optimal hyperparameters and applying WBF for more accurate bounding box predictions. In the outcome, the insulators are identified with an optimized prediction. Interpretative results are presented, and calculated as a function of how the network learned the pattern that results in the prediction.
 
 ---
 
