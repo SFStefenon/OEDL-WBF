@@ -4,7 +4,7 @@ The proposed OEDL-WBF presented in this repository employs the Optuna framework 
 
 ---
 
-## To perform the hypertuning of YOLO the **Optuna framework** is applied.
+## To perform the hypertuning considering multi-criteria optimization the **Optuna framework** is applied.  
 
 There are two ways to compute the Optuna, the first is locally on your machine (cluster or PC) and the second is using Google Colab.
 
