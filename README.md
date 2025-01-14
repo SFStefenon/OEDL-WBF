@@ -4,7 +4,7 @@ The proposed OEDL-WBF presented in this repository employs the Optuna framework 
 
 ---
 
-## To perform multi-criteria optimization the **Optuna framework** is considered.  
+## To perform multi-criteria optimization the **Optuna framework** is considered
 
 There are two ways to compute the Optuna, the first is locally on your machine (cluster or PC) and the second is using Google Colab.
 
@@ -16,13 +16,13 @@ OBS: Since the analysis is using a deep learning-based model, depending on your 
 
 ---
 
-## For architecture optimization the **weighted box fusion** is used.
+## For architecture optimization the **weighted box fusion** is used
 
 To apply the WBF you will need to train the model several times and save the weights. After that the WFB ensemble the YOLO's outputs to have a better prediction. You can find the algorithm [here](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Weighted_Box_Fusion/WBF_yolo.ipynb).
 
 ---
 
-## For interpretability the **EigenCam** is applied.
+## For interpretability the **EigenCam** is applied
 
 Examples of the results of the method can be found [here](https://github.com/SFStefenon/WBF-HE-YOLO/tree/main/EigenCam).
 
