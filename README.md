@@ -16,13 +16,13 @@ OBS: Since the analysis is using a deep learning-based model, depending on your 
 
 ---
 
-## For architecture optimization the **weighted box fusion (WBF)** is used.
+## For architecture optimization the **weighted box fusion** is used.
 
 To apply the WBF you will need to train the model several times and save the weights. After that the WFB ensemble the YOLO's outputs to have a better prediction. You can find the algorithm [here](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Weighted_Box_Fusion/WBF_yolo.ipynb).
 
 ---
 
-## For interpretability the **EigenCam** explainable AI (XAI) is applied.
+## For interpretability the **EigenCam** is applied.
 
 Examples of the results of the method can be found [here](https://github.com/SFStefenon/WBF-HE-YOLO/tree/main/EigenCam).
 
@@ -33,7 +33,7 @@ Examples of the results of the method can be found [here](https://github.com/SFS
 The first step is to download the YOLOv8. I recommend doing that from the official developer [Ultralytics](https://github.com/ultralytics/ultralytics).
 This version is based on PyTorch, and it is available for your machine or Google Colab.
 
-The second step to compute YOLO in your machine is to create the environment. Follows the example of how to do it:
+The second step in computing YOLO in your machine is to create the environment. Follow the example of how to do it:
 
 ```
 # Enter in the folder of your project
@@ -107,7 +107,7 @@ The model presented in this repository was evaluated using the dataset released 
 
 ### Create Your Custom Dataset
 
-To create a custom dataset with the goal of object detection it is necessary to use an image labeling software.
+To create a custom dataset with the goal of object detection it is necessary to use image labeling software.
 
 I recommend using the [labelImg](https://github.com/heartexlabs/labelImg), it's based on Python, so it's light and easy to use.
 LabelImg is a graphical image annotation tool written in Python.
@@ -129,4 +129,4 @@ Thank you.
 
 Dr. **Stefano Frizzo Stefenon**.
 
-Trento, Italy, April 10, 2023.
+Regina, Canada, January 14, 2025.
