@@ -62,7 +62,7 @@ The third step is to organize your dataset.
 scp -r C:/Users/user_name/Desktop/dataset/ cluster:/home/user_name/dataset/
 ```
 
-### Organize Your Dataset
+### Organize your dataset
 
 Depending on the version of YOLO you will need to organize your data differently.
 
@@ -97,7 +97,7 @@ The model will load the labels automatically based on their names.
 
 ---
 
-### Used Database
+### Used database
 
 The model presented in this repository was evaluated using the dataset released by Dexter Lewis and Pratik Kulkarni, which can be found at [competition-insulator-defect-detection](https://dx.doi.org/10.21227/vkdw-x769) (accessed on March 25, 2023).
 
@@ -105,7 +105,7 @@ The model presented in this repository was evaluated using the dataset released 
 
 ---
 
-### Create Your Custom Dataset
+### Create your custom dataset
 
 To create a custom dataset with the goal of object detection it is necessary to use image labeling software.
 
