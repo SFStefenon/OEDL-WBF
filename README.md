@@ -129,4 +129,4 @@ Thank you.
 
 Dr. **Stefano Frizzo Stefenon**.
 
-Regina, Canada, January 14, 2025.
+Regina, Canada, 2025.
