@@ -125,6 +125,16 @@ names: ['broken_shell', 'flashover_damage', 'good_insulator', 'insulator_string'
 ```
 
 ---
+
+Additional information can be found at the **[Original Paper](https://doi.org/10.3390/s23063202)**.
+
+Stefenon, S. F., Seman, L. O., Singh, G., Yow, K.-C. Enhanced insulator fault detection using optimized ensemble of deep learning models based on weighted boxes fusion, International Journal of Electrical Power & Energy Systems, vol. xx, n. xx, p. xx, 2025.
+
+BibTeX:
+`@Article{s23063202, AUTHOR = {Stefenon, Stefano Frizzo and Seman, Laio Oriel and Singh, Gurmail and Yow, Kin-Choong}, TITLE = {Enhanced insulator fault detection using optimized ensemble of deep learning models based on weighted boxes fusion}, JOURNAL = {International Journal of Electrical Power \& Energy Systems}, VOLUME = {}, YEAR = {2025}, NUMBER = {}, PAGES = {}, DOI = {}}`
+
+---
+
 Thank you.
 
 Dr. **Stefano Frizzo Stefenon**.
