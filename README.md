@@ -1,24 +1,24 @@
 # Optimized ensemble of deep learning models based on weighted boxes fusion (OEDL-WBF)
 
-The proposed OEDL-WBF presented in this repository employs the Optuna framework based on a tree-structured Parzen estimator for hyperparameter optimization, to find the best setup for the object detection model. Subsequently, the hypertuned model is trained using the optimal hyperparameters and applying WBF for more accurate bounding box predictions. In the outcome, the insulators are identified with an optimized prediction. Interpretative results are presented, and calculated as a function of how the network learned the pattern that results in the prediction.
+The proposed OEDL-WBF presented in this repository employs the Optuna framework based on a tree-structured Parzen estimator for hyperparameter optimization to find the best setup for the object detection model. Subsequently, the hypertuned model is trained using the optimal hyperparameters and applying WBF for more accurate bounding box predictions. In the outcome, the insulators are identified with an optimized prediction. Interpretative results are presented and calculated as a function of how the network learned the pattern that results in the prediction.
 
 ---
 
 ## To perform multi-criteria optimization the **Optuna framework** is considered
 
-There are two ways to compute the Optuna, the first is locally on your machine (cluster or PC) and the second is using Google Colab.
+There are two ways to compute the Optuna, the first is locally on your machine (cluster or PC), and the second is using Google Colab.
 
-> If you want to use a local machine, you can follow this Python-based [algorithm](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Hypertuning_Optuna/Cluster_Computing/yolov8_insulator_exp1.py). Using a Cluster the study is gonna be saved and you can evaluate latter using [Colab](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Hypertuning_Optuna/Cluster_Computing/Experiment_Results/Optuna_Results.ipynb).
+> If you want to use a local machine, you can follow this Python-based [algorithm](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Hypertuning_Optuna/Cluster_Computing/yolov8_insulator_exp1.py). Using a Cluster, the study is gonna be saved, and you can evaluate later using [Colab](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Hypertuning_Optuna/Cluster_Computing/Experiment_Results/Optuna_Results.ipynb).
 
-> If you decide to use Colab, please go ahead and try it on using this [notebook](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Hypertuning_Optuna/Google_Colab_Computing/YOLOv8_Optuna.ipynb)! You will be asked to confirm your access to the drive where the data are saved.
+> If you decide to use Colab, please go ahead and try it on using this [notebook](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Hypertuning_Optuna/Google_Colab_Computing/YOLOv8_Optuna.ipynb)! You will be asked to confirm your access to the drive where the data is saved.
 
-OBS: Since the analysis is using a deep learning-based model, depending on your dataset, a high processing time will be required for the model to be trained (considering the defined number of epochs). The file that calls the dataset must be in the same main folder of the model.
+OBS: Since the analysis is using a deep learning-based model, depending on your dataset, a high processing time will be required for the model to be trained (considering the defined number of epochs). The file that calls the dataset must be in the same main folder as the model.
 
 ---
 
 ## For architecture optimization the **weighted box fusion** is used
 
-To apply the WBF you will need to train the model several times and save the weights. After that the WFB ensemble the YOLO's outputs to have a better prediction. You can find the algorithm [here](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Weighted_Box_Fusion/WBF_yolo.ipynb).
+To apply the WBF you will need to train the model several times and save the weights. After that, the WFB ensemble uses the YOLO's outputs to have a better prediction. You can find the algorithm [here](https://github.com/SFStefenon/WBF-HE-YOLO/blob/main/Weighted_Box_Fusion/WBF_yolo.ipynb).
 
 ---
 
@@ -30,13 +30,13 @@ Examples of the results of the method can be found [here](https://github.com/SFS
 
 ## Compute YOLOv8 in your machine
 
-The first step is to download the YOLOv8. I recommend doing that from the official developer [Ultralytics](https://github.com/ultralytics/ultralytics).
+The first step is to download YOLOv8. I recommend doing that from the official developer [Ultralytics](https://github.com/ultralytics/ultralytics).
 This version is based on PyTorch, and it is available for your machine or Google Colab.
 
-The second step in computing YOLO in your machine is to create the environment. Follow the example of how to do it:
+The second step in computing YOLO on your machine is to create the environment. Follow the example of how to do it:
 
 ```
-# Enter in the folder of your project
+# Enter the folder of your project
 cd ~~~ 
 
 # Check the environments available
@@ -58,13 +58,13 @@ conda env remove -n yolo-env
 The third step is to organize your dataset.
 
 ```
-# Example of how to upload your dataset in a Cluster
+# Example of how to upload your dataset to a Cluster
 scp -r C:/Users/user_name/Desktop/dataset/ cluster:/home/user_name/dataset/
 ```
 
 ### Organize your dataset
 
-Depending on the version of YOLO you will need to organize your data differently.
+Depending on the version of YOLO, you will need to organize your data differently.
 
 For YOLOv5, YOLOv7, and YOLOv8.
 ```    
@@ -107,17 +107,17 @@ The model presented in this repository was evaluated using the dataset released 
 
 ### Create your custom dataset
 
-To create a custom dataset with the goal of object detection it is necessary to use image labeling software.
+To create a custom dataset with the goal of object detection, it is necessary to use image labeling software.
 
 I recommend using the [labelImg](https://github.com/heartexlabs/labelImg), it's based on Python, so it's light and easy to use.
 LabelImg is a graphical image annotation tool written in Python.
 
-After you download the algorithm you can run the `labelImg.py`
+After you download the algorithm, you can run the `labelImg.py`
 
-In the `data/predefined_classes.txt` you can define the classes that you are going to use. 
-This will allocate the spaces in the memory, therefore the number in the annotation will follow this order.
+In the `data/predefined_classes.txt`, you can define the classes that you are going to use. 
+This will allocate the spaces in the memory, therefore, the number in the annotation will follow this order.
 
-Later on, the classes that you have used have to match with `mydata.yaml`, which you previously created as this example:
+Later on, the classes that you have used have to match with `mydata.yaml`, which you previously created as in this example:
 
 ```
 nc: 4 
@@ -126,12 +126,12 @@ names: ['broken_shell', 'flashover_damage', 'good_insulator', 'insulator_string'
 
 ---
 
-Additional information can be found at the **[Original Paper](https://doi.org/10.3390/s23063202)**.
+Additional information can be found at the **[Original Paper](https://doi.org/10.1016/j.ijepes.2025.110682)**.
 
-Stefenon, S. F., Seman, L. O., Singh, G., Yow, K.-C. Enhanced insulator fault detection using optimized ensemble of deep learning models based on weighted boxes fusion, International Journal of Electrical Power & Energy Systems, vol. xx, n. xx, p. xx, 2025.
+Stefenon, S. F., Seman, L. O., Singh, G., Yow, K.-C. Enhanced insulator fault detection using optimized ensemble of deep learning models based on weighted boxes fusion, International Journal of Electrical Power & Energy Systems, vol. 168, p. 110682, 2025.
 
 BibTeX:
-`@Article{stefenon2025enhanced, AUTHOR = {Stefenon, Stefano Frizzo and Seman, Laio Oriel and Singh, Gurmail and Yow, Kin-Choong}, TITLE = {Enhanced insulator fault detection using optimized ensemble of deep learning models based on weighted boxes fusion}, JOURNAL = {International Journal of Electrical Power \& Energy Systems}, VOLUME = {}, YEAR = {2025}, NUMBER = {}, PAGES = {}, DOI = {}}`
+`@Article{stefenon2025enhanced, AUTHOR = {Stefenon, Stefano Frizzo and Seman, Laio Oriel and Singh, Gurmail and Yow, Kin-Choong}, TITLE = {Enhanced insulator fault detection using optimized ensemble of deep learning models based on weighted boxes fusion}, JOURNAL = {International Journal of Electrical Power \& Energy Systems}, VOLUME = {168}, YEAR = {2025}, PAGES = {110682}, DOI = {10.1016/j.ijepes.2025.110682}}`
 
 ---
 
