@@ -135,8 +135,6 @@ BibTeX:
 
 ---
 
----
-
 Thank you
 
 Dr. **Stefano Frizzo Stefenon**
