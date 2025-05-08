@@ -135,8 +135,14 @@ BibTeX:
 
 ---
 
-Thank you.
+---
 
-Dr. **Stefano Frizzo Stefenon**.
+Thank you
 
-Regina, Canada, 2025.
+Dr. **Stefano Frizzo Stefenon**
+
+Postdoctoral fellow at the University of Regina
+
+Faculty of Engineering and Applied Sciences
+
+Regina, SK, Canada, 2025.
